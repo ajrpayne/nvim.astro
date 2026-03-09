@@ -8,6 +8,16 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    autocmds = {
+      retab_on_save = {
+        {
+          event = "BufWritePre",
+          pattern = "*",
+          desc = "Automatically retab on save",
+          callback = function() vim.cmd "silent! %retab!" end,
+        },
+      },
+    },
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
@@ -44,6 +54,9 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         list = true, -- sets vim.opt.list (shows invisible characters)
+        expandtab = true,
+        shiftwidth = 2,
+        tabstop = 2,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

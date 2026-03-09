@@ -1,6 +1,10 @@
 --vim.opt.listchars:append "space:·" -- Set listchars to include space
 -- :set lcs+=space:·
 
+-- set expandtab      " Use spaces when the Tab key is pressed
+-- set shiftwidth=2   " Use 2 spaces for auto-indentation
+-- set tabstop=2      " Display tabs as 2 spaces wide
+
 -- :set expandtab?
 -- :set shiftwidth?
 -- :set tabstop?

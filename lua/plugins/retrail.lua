@@ -6,7 +6,7 @@ return {
       -- Trim on write behaviour.
       trim = {
         -- Auto trim on BufWritePre
-        auto = false,
+        auto = true,
         -- Trailing whitespace as highlighted.
         whitespace = true,
         -- Final blank (i.e. whitespace only) lines.
